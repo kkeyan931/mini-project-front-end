@@ -1,0 +1,118 @@
+{
+  "students": [
+    {
+      "id": 19,
+      "marks": {
+        "Operating system": "100"
+      },
+      "enrolledSubjects": [
+        "Operating system"
+      ],
+      "rollNumber": "13245552",
+      "email": "anbu@gmail.com",
+      "department": "CSE",
+      "fullName": "Anbu",
+      "phone": "132435353"
+    },
+    {
+      "id": 20,
+      "marks": {
+        "OS": "80",
+        "DBMS": "70"
+      },
+      "enrolledSubjects": [
+        "OS",
+        "DBMS"
+      ],
+      "rollNumber": "2018103549",
+      "email": "kkeyan931@gmail.com",
+      "department": "CSE",
+      "fullName": "Karthikeyan K",
+      "phone": "09245653587"
+    },
+    {
+      "id": 21,
+      "marks": {
+        "DBMS": "100",
+        "Java": "100",
+        "Operating system": "99"
+      },
+      "enrolledSubjects": [
+        "DBMS",
+        "Java",
+        "Operating system"
+      ],
+      "rollNumber": "2018103543",
+      "email": "jim@gmail.com",
+      "department": "CSE",
+      "fullName": "Jim Tony",
+      "phone": "1234567890"
+    }
+  ],
+  "subjects": [
+    {
+      "subjectCode": "CS2011",
+      "subjectTitle": "Compiler design",
+      "credits": "6",
+      "maxMarks": "100",
+      "semester": "3",
+      "id": 4
+    },
+    {
+      "subjectCode": "CS2014",
+      "subjectTitle": "Operating system",
+      "credits": "6",
+      "maxMarks": "100",
+      "semester": "3",
+      "id": 5
+    },
+    {
+      "subjectCode": "CS1313",
+      "subjectTitle": "Java",
+      "credits": "6",
+      "maxMarks": "100",
+      "semester": "3",
+      "id": 6
+    },
+    {
+      "subjectCode": "CS13133",
+      "subjectTitle": "DBMS",
+      "credits": "6",
+      "maxMarks": "100",
+      "semester": "3",
+      "id": 7
+    },
+    {
+      "subjectCode": "CS33133",
+      "subjectTitle": "Data structures and algorithm",
+      "credits": "6",
+      "maxMarks": "100",
+      "semester": "4",
+      "id": 8
+    },
+    {
+      "subjectCode": "CS2424",
+      "subjectTitle": "Computer Networks",
+      "credits": "6",
+      "maxMarks": "100",
+      "semester": "5",
+      "id": 9
+    },
+    {
+      "subjectCode": "CS1331",
+      "subjectTitle": "Deep Learning",
+      "credits": "5",
+      "maxMarks": "100",
+      "semester": "6",
+      "id": 10
+    },
+    {
+      "subjectCode": "CS1335",
+      "subjectTitle": "Machine Learning",
+      "credits": "5",
+      "maxMarks": "100",
+      "semester": "7",
+      "id": 11
+    }
+  ]
+}

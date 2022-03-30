@@ -1,9 +1,22 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/"
+      ><span style="font-size: 25px">Students</span></router-link
+    >
+    |
+    <router-link to="/subject"
+      ><span style="font-size: 25px">Subjects</span></router-link
+    >
+    |
+    <router-link to="/marks"
+      ><span style="font-size: 25px">Marks</span></router-link
+    >
+    |
+    <router-link to="/average"
+      ><span style="font-size: 25px">Average</span></router-link
+    >
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
