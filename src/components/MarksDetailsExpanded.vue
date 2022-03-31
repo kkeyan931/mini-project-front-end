@@ -97,7 +97,7 @@ export default {
       await this.fetchStudentsDetails();
       this.toggleEditMarks(null);
       this.toggleMarksEditButton();
-      this.marks = [];
+      this.marks = {};
     },
   },
 };

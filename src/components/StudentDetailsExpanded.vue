@@ -102,7 +102,7 @@
             <p>Enrolled Subjects <span>*</span></p>
             <VueMultiselect
               :multiple="true"
-              v-model="currentEditStudent.enrolledSubjects"
+              v-model="newEnrolledSubjects"
               :options="allSubjectsTitle"
             >
             </VueMultiselect>
@@ -130,6 +130,7 @@ export default {
   name: "StudentDetailsExpanded",
   data() {
     return {
+      marks: {},
       enrolledSubjects: [],
       rollNumber: "",
       email: "",
@@ -141,12 +142,23 @@ export default {
   components: {
     VueMultiselect,
   },
-  computed: mapGetters([
-    "currentEditStudent",
-    "showStudentEditButton",
-    "allStudentsDetails",
-    "allSubjectsTitle",
-  ]),
+  computed: {
+    ...mapGetters([
+      "currentEditStudent",
+      "showStudentEditButton",
+      "allStudentsDetails",
+      "allSubjectsTitle",
+    ]),
+    newEnrolledSubjects: {
+      get() {
+        return this.currentEditStudent.enrolledSubjects;
+      },
+      set(newVal) {
+        this.enrolledSubjects = newVal;
+        this.currentEditStudent.enrolledSubjects = newVal;
+      },
+    },
+  },
   methods: {
     ...mapActions([
       "fetchStudentsDetails",
@@ -155,14 +167,15 @@ export default {
       "toggleStudentEditButton",
       "updateStudent",
       "fetchSubjectsDetails",
-      "getAllSubjectsTitles"
+      "getAllSubjectsTitles",
     ]),
     async onSubmit(e) {
       e.preventDefault();
       const updatedStudent = {
         id: this.currentEditStudent.id,
+        marks: this.currentEditStudent.marks,
         enrolledSubjects:
-          this.enrolledSubjects == []
+          this.enrolledSubjects.length == 0
             ? this.currentEditStudent.enrolledSubjects
             : this.enrolledSubjects,
         rollNumber:
