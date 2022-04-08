@@ -25,7 +25,7 @@ export default {
   color: #fff;
   text-align: center;
   cursor: pointer;
-  width: 10%;
+  
   margin-bottom: 15px;
   opacity: 0.8;
   font-size: 18px;

@@ -16,12 +16,12 @@ const getters = {
 
 const actions = {
   async fetchSubjectsDetails({ commit }) {
-    const response = await fetch("api/subjects");
+    const response = await fetch("https://www.mini-project.learnlinuxfree.tech/subjects");
     const data = await response.json();
     commit("setSubjectsDetails", data);
   },
   async addSubject({ commit }, newSubject) {
-    const res = await fetch("api/subjects", {
+    const res = await fetch("https://www.mini-project.learnlinuxfree.tech/subjects", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -36,7 +36,7 @@ const actions = {
   },
   async updateSubject({ commit }, updatedSubject) {
     const res = await fetch(
-      `api/subjects/${updatedSubject.id}`,
+      `https://www.mini-project.learnlinuxfree.tech/subjects/${updatedSubject.id}`,
       {
         method: "PUT",
         headers: {
@@ -48,7 +48,7 @@ const actions = {
   },
   async deleteSubject({ commit }, subject) {
     if (confirm("Are you sure?")) {
-      const res = await fetch(`api/subjects/${subject.id}`, {
+      const res = await fetch(`https://www.mini-project.learnlinuxfree.tech/subjects/${subject.id}`, {
         method: "DELETE",
       });
     }

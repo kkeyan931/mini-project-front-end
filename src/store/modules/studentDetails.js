@@ -14,7 +14,7 @@ const getters = {
 
 const actions = {
   async fetchStudentsDetails({ commit }) {
-    const response = await fetch("api/students");
+    const response = await fetch("https://www.mini-project.learnlinuxfree.tech/students");
     const data = await response.json();
     data.sort((a, b) => {
       return a.fullName.localeCompare(b.fullName);
@@ -22,7 +22,7 @@ const actions = {
     commit("setStudentsDetails", data);
   },
   async addStudent({ commit }, newStudent) {
-    const res = await fetch("api/students", {
+    const res = await fetch("https://www.mini-project.learnlinuxfree.tech/students", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -36,7 +36,7 @@ const actions = {
     commit("newStudent", data);
   },
   async updateStudent({ commit }, updatedStudent) {
-    const res = await fetch(`api/students/${updatedStudent.id}`, {
+    const res = await fetch(`https://www.mini-project.learnlinuxfree.tech/students/${updatedStudent.id}`, {
       method: "PUT",
       headers: {
         "Content-type": "application/json",
@@ -46,7 +46,7 @@ const actions = {
   },
   async deleteStudent({ commit }, student) {
     if (confirm("Are you sure?")) {
-      const res = await fetch(`api/students/${student.id}`, {
+      const res = await fetch(`https://www.mini-project.learnlinuxfree.tech/students/${student.id}`, {
         method: "DELETE",
       });
     }

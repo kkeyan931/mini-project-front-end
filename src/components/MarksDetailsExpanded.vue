@@ -80,6 +80,13 @@ export default {
     ]),
     async onSubmit(e) {
       e.preventDefault();
+      if (Object.keys(this.currentEditStudentMarks.marks).length !== 0) {
+        for (const [key, value] of Object.entries(this.currentEditStudentMarks.marks)) {
+          if(this.marks[key]==undefined){
+            this.marks[key]=value;
+          }
+        }
+      }
       const updatedStudent = {
         id: this.currentEditStudentMarks.id,
         marks:
@@ -93,11 +100,12 @@ export default {
         fullName: this.currentEditStudentMarks.fullName,
         phone: this.currentEditStudentMarks.phone,
       };
+      console.log(updatedStudent);
       await this.updateStudent(updatedStudent);
       await this.fetchStudentsDetails();
+      this.marks = {};
       this.toggleEditMarks(null);
       this.toggleMarksEditButton();
-      this.marks = {};
     },
   },
 };

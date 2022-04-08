@@ -25,7 +25,7 @@ export default {
 <style scope>
 table {
   border-radius: 5px;
-  max-width: 700px;
+  /* max-width: 700px; */
   width: 100%;
   margin: 5% auto;
   background-color: #ffffff;
